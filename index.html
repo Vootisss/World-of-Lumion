@@ -28,10 +28,19 @@
             background-color: #4444d8;
         }
     </style>
+    <!-- Link the JavaScript file -->
+    <script src="script.js" defer></script>
 </head>
 <body>
     <h1>Welcome to the Lumara Game!</h1>
-    <p>Create your first Lumara and start your adventure!</p>
-    <button class="button" onclick="alert('Feature coming soon!')">Adopt a Lumara</button>
+    <div id="account-section">
+        <p>Create an account to get started:</p>
+        <form id="signup-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+            <button type="submit" class="button">Sign Up</button>
+        </form>
+        <p id="welcome-message" style="display: none;">Welcome, <span id="user-name"></span>!</p>
+    </div>
 </body>
 </html>
