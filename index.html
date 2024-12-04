@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lumara Game</title>
+    <title>Lumara Generator</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -27,20 +27,27 @@
         .button:hover {
             background-color: #4444d8;
         }
+        .output {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            background: #fff;
+            border-radius: 5px;
+        }
     </style>
-    <!-- Link the JavaScript file -->
     <script src="script.js" defer></script>
 </head>
 <body>
-    <h1>Welcome to the Lumara Game!</h1>
-    <div id="account-section">
-        <p>Create an account to get started:</p>
-        <form id="signup-form">
-            <label for="username">Username:</label>
-            <input type="text" id="username" required>
-            <button type="submit" class="button">Sign Up</button>
-        </form>
-        <p id="welcome-message" style="display: none;">Welcome, <span id="user-name"></span>!</p>
+    <h1>Lumara Generator</h1>
+    <button class="button" id="generate">Create a Lumara</button>
+    <div class="output" id="lumara-output">
+        <p>Click "Create a Lumara" to generate your character!</p>
+    </div>
+    <div id="name-section" style="margin-top: 20px; display: none;">
+        <label for="lumara-name">Name your Lumara:</label>
+        <input type="text" id="lumara-name">
+        <button class="button" id="save-name">Save Name</button>
+        <p id="name-output" style="margin-top: 10px;"></p>
     </div>
 </body>
 </html>
